@@ -1,0 +1,197 @@
+1.I Love Lance & Janice
+=====================
+
+You've caught two of your fellow minions passing coded notes back and forth - while they're on duty, no less! Worse, you're pretty sure it's not job-related - they're both huge fans of the space soap opera "Lance & Janice". You know how much Commander Lambda hates waste, so if you can prove that these minions are wasting her time passing non-job-related notes, it'll put you that much closer to a promotion. 
+
+Fortunately for you, the minions aren't exactly advanced cryptographers. In their code, every lowercase letter [a..z] is replaced with the corresponding one in [z..a], while every other character (including uppercase letters and punctuation) is left untouched.  That is, 'a' becomes 'z', 'b' becomes 'y', 'c' becomes 'x', etc.  For instance, the word "vmxibkgrlm", when decoded, would become "encryption".
+
+Write a function called answer(s) which takes in a string and returns the deciphered string so you can show the commander proof that these minions are talking about "Lance & Janice" instead of doing their jobs.
+
+Languages
+=========
+
+To provide a Python solution, edit solution.py
+To provide a Java solution, edit solution.java
+
+Test cases
+==========
+
+Inputs:
+    (string) s = "wrw blf hvv ozhg mrtsg'h vkrhlwv?"
+Output:
+    (string) "did you see last night's episode?"
+
+Inputs:
+    (string) s = "Yvzs! I xzm'g yvorvev Lzmxv olhg srh qly zg gsv xlolmb!!"
+Output:
+    (string) "Yeah! I can't believe Lance lost his job at the colony!!"
+
+
+2.En Route Salute
+===============
+
+Commander Lambda loves efficiency and hates anything that wastes time. She's a busy lamb, after all! She generously rewards henchmen who identify sources of inefficiency and come up with ways to remove them. You've spotted one such source, and you think solving it will help you build the reputation you need to get promoted.
+
+Every time the Commander's employees pass each other in the hall, each of them must stop and salute each other - one at a time - before resuming their path. A salute is five seconds long, so each exchange of salutes takes a full ten seconds (Commander Lambda's salute is a bit, er, involved). You think that by removing the salute requirement, you could save several collective hours of employee time per day. But first, you need to show her how bad the problem really is.
+
+Write a program that counts how many salutes are exchanged during a typical walk along a hallway. The hall is represented by a string. For example:
+"--->-><-><-->-"
+
+Each hallway string will contain three different types of characters: '>', an employee walking to the right; '<', an employee walking to the left; and '-', an empty space. Every employee walks at the same speed either to right or to the left, according to their direction. Whenever two employees cross, each of them salutes the other. They then continue walking until they reach the end, finally leaving the hallway. In the above example, they salute 10 times.
+
+Write a function answer(s) which takes a string representing employees walking along a hallway and returns the number of times the employees will salute. s will contain at least 1 and at most 100 characters, each one of -, >, or <.
+
+Languages
+=========
+
+To provide a Python solution, edit solution.py
+To provide a Java solution, edit solution.java
+
+Test cases
+==========
+
+Inputs:
+    (string) s = ">----<"
+Output:
+    (int) 2
+
+Inputs:
+    (string) s = "<<>><"
+Output:
+    (int) 4
+
+
+
+3.Bunny Prisoner Locating
+=======================
+
+Keeping track of Commander Lambda's many bunny prisoners is starting to get tricky. You've been tasked with writing a program to match bunny prisoner IDs to cell locations.
+
+The LAMBCHOP doomsday device takes up much of the interior of Commander Lambda's space station, and as a result the prison blocks have an unusual layout. They are stacked in a triangular shape, and the bunny prisoners are given numerical IDs starting from the corner, as follows:
+
+| 7
+| 4 8
+| 2 5 9
+| 1 3 6 10
+
+Each cell can be represented as points (x, y), with x being the distance from the vertical wall, and y being the height from the ground. 
+
+For example, the bunny prisoner at (1, 1) has ID 1, the bunny prisoner at (3, 2) has ID 9, and the bunny prisoner at (2,3) has ID 8. This pattern of numbering continues indefinitely (Commander Lambda has been taking a LOT of prisoners). 
+
+Write a function answer(x, y) which returns the prisoner ID of the bunny at location (x, y). Each value of x and y will be at least 1 and no greater than 100,000. Since the prisoner ID can be very large, return your answer as a string representation of the number.
+
+Languages
+=========
+
+To provide a Python solution, edit solution.py
+To provide a Java solution, edit solution.java
+
+Test cases
+==========
+
+Inputs:
+    (int) x = 3
+    (int) y = 2
+Output:
+    (string) "9"
+
+Inputs:
+    (int) x = 5
+    (int) y = 10
+Output:
+    (string) "96"
+
+
+4.Fuel Injection Perfection
+=========================
+Commander Lambda has asked for your help to refine the automatic quantum antimatter fuel injection system for her LAMBCHOP 
+doomsday device. It's a great chance for you to get a closer look at the LAMBCHOP - and maybe sneak in a bit of sabotage 
+while you're at it - so you took the job gladly. 
+Quantum antimatter fuel comes in small pellets, which is convenient since the many moving parts of the LAMBCHOP each need 
+to be fed fuel one pellet at a time. However, minions dump pellets in bulk into the fuel intake. You need to figure out 
+the most efficient way to sort and shift the pellets down to a single pellet at a time. 
+The fuel control mechanisms have three operations: 
+1) Add one fuel pellet
+2) Remove one fuel pellet
+3) Divide the entire group of fuel pellets by 2 (due to the destructive energy released when a quantum antimatter pellet is 
+cut in half, the safety controls will only allow this to happen if there is an even number of pellets)
+Write a function called answer(n) which takes a positive integer as a string and returns the minimum number of operations 
+needed to transform the number of pellets to 1. The fuel intake control panel can only display a number up to 309 digits 
+long, so there won't ever be more pellets than you can express in that many digits.
+For example:
+answer(4) returns 2: 4 -> 2 -> 1
+answer(15) returns 5: 15 -> 16 -> 8 -> 4 -> 2 -> 1
+Languages
+=========
+To provide a Python solution, edit solution.py
+To provide a Java solution, edit solution.java
+Test cases
+==========
+Inputs:
+    (string) n = "4"
+Output:
+    (int) 2
+Inputs:
+    (string) n = "15"
+Output:
+    (int) 5
+
+
+5.The Grandest Staircase Of Them All
+==================================
+
+With her LAMBCHOP doomsday device finished, Commander Lambda is preparing for her debut on the galactic stage - but in order to make a grand entrance, she needs a grand staircase! As her personal assistant, you've been tasked with figuring out how to build the best staircase EVER. 
+
+Lambda has given you an overview of the types of bricks available, plus a budget. You can buy different amounts of the different types of bricks (for example, 3 little pink bricks, or 5 blue lace bricks). Commander Lambda wants to know how many different types of staircases can be built with each amount of bricks, so she can pick the one with the most options. 
+
+Each type of staircase should consist of 2 or more steps.  No two steps are allowed to be at the same height - each step must be lower than the previous one. All steps must contain at least one brick. A step's height is classified as the total amount of bricks that make up that step.
+For example, when N = 3, you have only 1 choice of how to build the staircase, with the first step having a height of 2 and the second step having a height of 1: (# indicates a brick)
+
+#
+##
+21
+
+When N = 4, you still only have 1 staircase choice:
+
+#
+#
+##
+31
+ 
+But when N = 5, there are two ways you can build a staircase from the given bricks. The two staircases can have heights (4, 1) or (3, 2), as shown below:
+
+#
+#
+#
+##
+41
+
+#
+##
+##
+32
+
+Write a function called answer(n) that takes a positive integer n and returns the number of different staircases that can be built from exactly n bricks. n will always be at least 3 (so you can have a staircase at all), but no more than 200, because Commander Lambda's not made of money!
+
+Languages
+=========
+
+To provide a Python solution, edit solution.py
+To provide a Java solution, edit solution.java
+
+Test cases
+==========
+
+Inputs:
+    (int) n = 3
+Output:
+    (int) 1
+
+Inputs:
+    (int) n = 200
+Output:
+    (int) 487067745
+
+
+
+https://goo.gl/vYcTBh
